@@ -24,6 +24,8 @@ public class SystemClass {
 			System.out.println(System.getProperty("user.dir"));
 			
 			System.out.println(System.getProperties());
+			
+			
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
