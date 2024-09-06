@@ -6,10 +6,11 @@ public class StackApp {
 		
 		StackUser u = new StackUser();
 		
-		FixedArrayStack fs = new FixedArrayStack(9);
+		//FixedArrayStack fs = new FixedArrayStack(9);
 		
 		//DynStack ds = new DynStack();
 		
+		Stack fs = new FixedArrayStack(9);
 		
 		u.fill(fs);
 		
