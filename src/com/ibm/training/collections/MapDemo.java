@@ -1,8 +1,8 @@
 package com.ibm.training.collections;
 
-import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.TreeMap;
 
 public class MapDemo {
 
@@ -20,7 +20,9 @@ public class MapDemo {
 		
 		//Map<String, Integer> runsMap = new HashMap<>(); iteration order is not same as insertion order
 		
-		Map<String, Integer> runsMap = new LinkedHashMap<>(); //iteration order is same as insertion order
+		//Map<String, Integer> runsMap = new LinkedHashMap<>(); //iteration order is same as insertion order
+		
+		Map<String, Integer> runsMap = new TreeMap<>(); //all entries arranged in asc order of keys
 		
 		runsMap.put("virat", 12);
 		runsMap.put("rohit", 45);

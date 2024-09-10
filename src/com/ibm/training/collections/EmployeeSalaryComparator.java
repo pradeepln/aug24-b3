@@ -9,6 +9,7 @@ public class EmployeeSalaryComparator implements Comparator<Employee> {
 
 	@Override
 	public int compare(Employee e1, Employee e2) {
+		//System.out.println("Inside esC , comparing "+e1+" with "+e2);
 		return (int) (e1.getSalary() - e2.getSalary());
 	}
 }
@@ -23,7 +24,7 @@ public class EmployeeSalaryComparator implements Comparator<Employee> {
 //		Object e2 = l.get(1);
 //		int num = c.compare(e1, e2);
 //		if(num > 0) {
-//			l.set(0,e1);
+//			l.set(0,e2);
 //			l.set(1, e1);
 //		}else {
 //			

@@ -3,6 +3,7 @@ package com.ibm.training.collections;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.ibm.training.basics.Employee;
@@ -13,7 +14,9 @@ public class SortDemo {
 		//sortArrayOfString();
 		//sortListOfString();
 		//sortListOfUserDefinedType();
-		sortListOfUserDefinedTypeNonNatural();
+		//sortListOfUserDefinedTypeNonNatural();
+		//sortArrayOfStringBasedOnLength();
+		sortArrayOfStringBasedOnLengthUsingAnon();
 	}
 	
 	private static void sortListOfUserDefinedTypeNonNatural() {
@@ -61,6 +64,31 @@ public class SortDemo {
 		String[] words = new String[] {"this","is","a","series","of","weird","words","like","zebra","and","orion"};
 		System.out.println("before sorting \n" + Arrays.toString(words));
 		Arrays.sort(words);
+		System.out.println("after sorting \n" + Arrays.toString(words));
+		
+	}
+	
+	private static void sortArrayOfStringBasedOnLength() {
+		String[] words = new String[] {"this","is","a","series","of","weird","words","like","zebra","and","orion"};
+		System.out.println("before sorting \n" + Arrays.toString(words));
+		
+		Arrays.sort(words, new StringLengthComparator());
+		
+		System.out.println("after sorting \n" + Arrays.toString(words));
+		
+	}
+	
+	private static void sortArrayOfStringBasedOnLengthUsingAnon() {
+		String[] words = new String[] {"this","is","a","series","of","weird","words","like","zebra","and","orion"};
+		System.out.println("before sorting anon \n" + Arrays.toString(words));
+		
+		Arrays.sort(words, new Comparator<String>() {
+			@Override
+			public int compare(String s1, String s2) {
+				return s1.length() - s2.length();
+			}
+		});
+		
 		System.out.println("after sorting \n" + Arrays.toString(words));
 		
 	}

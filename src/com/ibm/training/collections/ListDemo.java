@@ -85,7 +85,7 @@ public class ListDemo {
 		
 		System.out.println("_______ everyting in ll ________");
 		for(int i = 0; i < ll.size(); i++) {
-			String aValue = (String) ll.get(i); //random-access: O(n)
+			String aValue = ll.get(i); //random-access: O(n)
 			System.out.println(aValue);
 		}
 		

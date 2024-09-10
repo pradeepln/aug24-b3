@@ -47,6 +47,7 @@ public class Employee implements Comparable<Employee>{
 	
 	@Override
 	public int compareTo(Employee other) {
+		//System.out.println("In emp obj itself , comparing "+this+" with "+other);
 		if(this.id > other.id) {
 			return 1;
 		}else if(other.id > this.id) {
