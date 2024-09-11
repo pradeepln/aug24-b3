@@ -3,10 +3,21 @@ package com.ibm.training.lambdas;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class OurOwnFunIntfDemo {
 	
-	public static <T> List<T> allMatches(List<T> src, MyCondition<T> condition){
+//	public static <T> List<T> allMatches(List<T> src, MyCondition<T> condition){
+//		List<T> result = new ArrayList<>();
+//		for(T aValue : src) {
+//			if(condition.test(aValue)) {
+//				result.add(aValue);
+//			}
+//		}
+//		return result;
+//	}
+	
+	public static <T> List<T> allMatches(List<T> src, Predicate<T> condition){
 		List<T> result = new ArrayList<>();
 		for(T aValue : src) {
 			if(condition.test(aValue)) {

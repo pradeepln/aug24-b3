@@ -5,4 +5,6 @@ public interface MyCondition<T> {
 	
 	boolean test(T s);
 	
+	
+	
 }
