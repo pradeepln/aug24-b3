@@ -6,11 +6,11 @@ import java.util.List;
 
 public class OurOwnFunIntfDemo {
 	
-	public static List<String> allMatches(List<String> src, MyCondition condition){
-		List<String> result = new ArrayList<>();
-		for(String aString : src) {
-			if(condition.test(aString)) {
-				result.add(aString);
+	public static <T> List<T> allMatches(List<T> src, MyCondition<T> condition){
+		List<T> result = new ArrayList<>();
+		for(T aValue : src) {
+			if(condition.test(aValue)) {
+				result.add(aValue);
 			}
 		}
 		return result;
@@ -24,6 +24,12 @@ public class OurOwnFunIntfDemo {
 		System.out.println(wordsBiggerThan3);
 		List<String> wordsWithLetterE = allMatches(list,s -> s.contains("e"));
 		System.out.println(wordsWithLetterE);
+		
+		List<Integer> iList = List.of(1,3,56,45,62,12,71,23);
+		List<Integer> evens = allMatches(iList, i -> i%2 == 0);
+		System.out.println(evens);
+		
+		//List<String> x = allMatches(list,s -> s.charAt(20) == 'c');
 	}
 
 }
