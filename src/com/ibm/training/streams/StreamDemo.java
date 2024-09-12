@@ -19,18 +19,18 @@ public class StreamDemo {
 //			.map(s -> s.toUpperCase())
 //			.forEach(s -> System.out.println(s));
 		
-//		List<String> upperCaseWords = wordList
-//										.stream()
-//										.map(s -> s.toUpperCase())
-//										.toList();
-//		System.out.println(upperCaseWords);
+		List<String> upperCaseWords = wordList
+										.stream()
+										.map(s -> s.toUpperCase())
+										.toList();
+		System.out.println(upperCaseWords);
 //		
-//		List<Integer> lengths = wordList
-//									.stream()
-//									.map(s -> s.length())
-//									.map(i -> i * i)
-//									.toList();
-//		System.out.println(lengths);
+		List<Integer> lengths = wordList
+									.stream()
+									.map(s -> s.length())
+									.map(i -> i * i)
+									.toList();
+		System.out.println(lengths);
 		
 //		wordList
 //			.stream()
