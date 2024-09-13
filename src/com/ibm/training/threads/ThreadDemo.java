@@ -4,7 +4,7 @@ public class ThreadDemo {
 
 	public static void main(String[] args) throws InterruptedException {
 		long startTime = System.currentTimeMillis();
-		
+		//Daemon
 		//usingThreadSubClass();
 		usingRunnableImpl();
 		
@@ -45,6 +45,8 @@ public class ThreadDemo {
 //		}
 		
 		t1.join();
+		
+		
 		t2.join();
 		
 		System.out.println("There are "+(t1.getCount() + t2.getCount())+" primes between "+1+" and "+200000);

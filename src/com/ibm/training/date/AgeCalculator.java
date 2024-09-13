@@ -43,6 +43,8 @@ public class AgeCalculator {
 
 		System.out.println("You would have been " + p2.getYears() + " years, " + p2.getMonths() + "months and "
 				+ p2.getDays() + " days old!");
+		
+		System.out.println("Todays's date is: "+today.format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
 	}
 
 }
