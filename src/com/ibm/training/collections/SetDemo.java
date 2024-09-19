@@ -1,20 +1,19 @@
 package com.ibm.training.collections;
 
 import java.util.Scanner;
-import java.util.Set;
 import java.util.TreeSet;
 
 public class SetDemo {
 
 	public static void main(String[] args) {
 		
-//		Set<String> uniqueWords = new HashSet<>(); iteration order not same as insertion order
+//		Set<String> uniqueWords = new HashSet<>(); //iteration order not same as insertion order
 		
 //		Set<String> uniqueWords = new LinkedHashSet<>(); //iteration order same as insertion order
 		
 		TreeSet<String> uniqueWords = new TreeSet<>(); //internally sorted . All elements are kept in asc order
 		
-		
+//		TreeSet<String> uniqueWords = new TreeSet<>(new StringLengthComparator()); //internally sorted . All elements are kept in asc order
 		
 		Scanner kb = new Scanner(System.in);
 		
@@ -33,7 +32,7 @@ public class SetDemo {
 
 		System.out.println("______________ All Values ________________");
 		
-		for(String aWord : uniqueWords) {
+		for(String aWord : uniqueWords.descendingSet()) {
 			System.out.println(aWord);
 		}
 	}

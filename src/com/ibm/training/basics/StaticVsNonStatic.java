@@ -15,8 +15,19 @@ public class StaticVsNonStatic {
 //		
 //		System.out.println(Product.count);
 		
-		System.out.println("get count "+Product.getCount());
+//		System.out.println("get count "+Product.getCount());
+		
+//		Product.getName();
 
+//		System.out.println(" name : "+obj1.getName());
+		
+		
+		Product aP = new SpecialProduct(12, "SP");
+		
+//		System.out.println(aP.getCount());
+		
+		System.out.println(Product.getCount());
+		System.out.println(SpecialProduct.getCount());
 	}
 
 }

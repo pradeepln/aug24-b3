@@ -16,4 +16,21 @@ public class Product {
 		//System.out.println(id);
 		return count;
 	}
+	
+	public String getName() {
+		return name;
+	}
+}
+
+
+class SpecialProduct extends Product{
+	
+	public SpecialProduct(int id,String name) {
+		super(id,name);
+		//super(23,"");
+	}
+	
+	public static int getCount() {
+		return 33;
+	}
 }

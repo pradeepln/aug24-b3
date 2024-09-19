@@ -14,7 +14,7 @@ public class VarInititialization {
 		int[] iArr;
 		
 		i = 12;
-		i++;
+		System.out.println(++i);
 		//System.out.println(iArr);
 
 		System.out.println(sI+" , "+sB+" , "+sIArr);

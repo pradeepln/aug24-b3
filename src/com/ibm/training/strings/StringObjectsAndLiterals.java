@@ -11,6 +11,8 @@ public class StringObjectsAndLiterals {
 
 		System.out.println(s1.toUpperCase());
 		
+		String temp = s1.concat(" Java");
+		System.out.println("temp after concat : "+temp);
 		String msg = s1 + " World";
 		
 		System.out.println(msg);

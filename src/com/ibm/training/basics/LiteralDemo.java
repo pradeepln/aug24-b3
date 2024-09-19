@@ -14,7 +14,8 @@ public class LiteralDemo {
 		
 		
 		char c = 'c';
-		
+		//char ci = ;
+		//System.out.println(ci);
 		int oi = 042; //octal value
 		int hi = 0x123a; //hex value
 		char special = '\u3623'; //unicode
